@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 builder.Host.UseDefaultServiceProvider(options =>
 {
     options.ValidateScopes = false; // Ativa a validação de escopo. False evita erro de BD inexistente
@@ -10,6 +11,14 @@ builder.Host.UseDefaultServiceProvider(options =>
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.Cookie.Name = "Session";
+    options.IdleTimeout = TimeSpan.FromSeconds(10);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 
 //Configuração da Entity Framework Core
 builder.Services.AddDbContext<Contexto>(options =>
@@ -38,9 +47,11 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.UseSession();
+
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Session}/{action=Index}/{id?}");
 
 //SeedData.Initialize(app.Services);
 SeedData.semearDados(app);

@@ -8,6 +8,7 @@ namespace Atividade3.Models
         {
         }
 
+        public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Aluno> Alunos { get; set; }
         public DbSet<Exercicio> Exercicios { get; set; }
         public DbSet<Personal> Personals { get; set; }
@@ -16,6 +17,7 @@ namespace Atividade3.Models
         //configurar a relação muitos para muitos entre Treino e Exercício
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Usuario>().ToTable("Usuarios");
             //configuraçãoda entidade Treino
             modelBuilder.Entity<Treino>()
                 //Especifica que um Treino tem muitos Exercícios

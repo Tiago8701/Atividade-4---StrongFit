@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\unifenas\\Desenvolvimento Web Back End\\Atividade 3 - Academia Strong Fit\\Atividade3.csproj": {}
+    "C:\\Users\\tiago\\OneDrive\\Área de Trabalho\\Atividade3_Strong_Fit\\Atividade3.csproj": {}
   },
   "projects": {
-    "E:\\unifenas\\Desenvolvimento Web Back End\\Atividade 3 - Academia Strong Fit\\Atividade3.csproj": {
+    "C:\\Users\\tiago\\OneDrive\\Área de Trabalho\\Atividade3_Strong_Fit\\Atividade3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\unifenas\\Desenvolvimento Web Back End\\Atividade 3 - Academia Strong Fit\\Atividade3.csproj",
+        "projectUniqueName": "C:\\Users\\tiago\\OneDrive\\Área de Trabalho\\Atividade3_Strong_Fit\\Atividade3.csproj",
         "projectName": "Atividade3",
-        "projectPath": "E:\\unifenas\\Desenvolvimento Web Back End\\Atividade 3 - Academia Strong Fit\\Atividade3.csproj",
-        "packagesPath": "C:\\Users\\Celso Ávila\\.nuget\\packages\\",
-        "outputPath": "E:\\unifenas\\Desenvolvimento Web Back End\\Atividade 3 - Academia Strong Fit\\obj\\",
+        "projectPath": "C:\\Users\\tiago\\OneDrive\\Área de Trabalho\\Atividade3_Strong_Fit\\Atividade3.csproj",
+        "packagesPath": "C:\\Users\\tiago\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tiago\\OneDrive\\Área de Trabalho\\Atividade3_Strong_Fit\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Celso Ávila\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tiago\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -81,6 +86,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.30, 6.0.30]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.30, 6.0.30]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.30, 6.0.30]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.30, 6.0.30]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -89,7 +112,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\RuntimeIdentifierGraph.json"
         }
       }
     }

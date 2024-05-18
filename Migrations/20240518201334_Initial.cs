@@ -41,6 +41,21 @@ namespace Atividade3.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Usuarios",
+                columns: table => new
+                {
+                    UsuarioId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Senha = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Usuarios", x => x.UsuarioId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Alunos",
                 columns: table => new
                 {
@@ -142,6 +157,9 @@ namespace Atividade3.Migrations
         {
             migrationBuilder.DropTable(
                 name: "ExercicioTreino");
+
+            migrationBuilder.DropTable(
+                name: "Usuarios");
 
             migrationBuilder.DropTable(
                 name: "Exercicios");

@@ -138,6 +138,31 @@ namespace Atividade3.Migrations
                     b.ToTable("Treinos");
                 });
 
+            modelBuilder.Entity("Atividade3.Models.Usuario", b =>
+                {
+                    b.Property<int>("UsuarioId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UsuarioId"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Senha")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UsuarioId");
+
+                    b.ToTable("Usuarios", (string)null);
+                });
+
             modelBuilder.Entity("ExercicioTreino", b =>
                 {
                     b.Property<int>("ExerciciosExercicioID")

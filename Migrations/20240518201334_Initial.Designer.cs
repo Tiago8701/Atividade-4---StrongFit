@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Atividade3.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20240428222432_Initial")]
+    [Migration("20240518201334_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -139,6 +139,31 @@ namespace Atividade3.Migrations
                     b.HasIndex("PersonalID");
 
                     b.ToTable("Treinos");
+                });
+
+            modelBuilder.Entity("Atividade3.Models.Usuario", b =>
+                {
+                    b.Property<int>("UsuarioId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UsuarioId"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Senha")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UsuarioId");
+
+                    b.ToTable("Usuarios", (string)null);
                 });
 
             modelBuilder.Entity("ExercicioTreino", b =>
